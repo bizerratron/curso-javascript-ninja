@@ -51,49 +51,54 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-var book = function(nomeLivro){
-  var objeto = {
-      world_of_warcraft_a_ruptura: {
+var book = function (bookname) {
+  var books = {
+    'world_of_warcraft_a_ruptura': {
       quantidadePaginas: 336,
       autor: 'Christie Golden',
       editora: 'Galera Record'
     },
-      world_of_warcraft_mares_da_guerra: {
+    'world_of_warcraft_mares_da_guerra': {
       quantidadePaginas: 350,
       autor: 'Christie Golden',
       editora: 'Galera Record'
     },
-      world_of_warcraft_sombras_da_horda: {
+    'world_of_warcraft_sombras_da_horda': {
       quantidadePaginas: 294,
       autor: 'Christie Golden',
       editora: 'Galera Record'
     }
   };
-  return objeto;
+
+  if (bookname !== undefined) {
+    return books[bookname];
+  }
+  
+  return books;
 };
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.
 */
-console.log(fuckao(book()));
+console.log(book('world_of_warcraft_sombras_da_horda'));
 
 /*
 Ainda com a função acima, imprima a quantidade de páginas de um livro qualquer,
 usando a frase:
-"O livro [NOME_DO_LIVRO] tem [X] páginas!"
 */
-// ?
+console.log('O livro world_of_warcraft_sombras_da_horda tem '+book('world_of_warcraft_sombras_da_horda').quantidadePaginas+' páginas.');
+
 
 /*
 Ainda com a função acima, imprima o nome do autor de um livro qualquer, usando
 a frase:
 "O autor do livro [NOME_DO_LIVRO] é [AUTOR]."
 */
-// ?
+console.log('O autor do livro world_of_warcraft_sombras_da_horda é '+book('world_of_warcraft_sombras_da_horda').autor);
 
 /*
 Ainda com a função acima, imprima o nome da editora de um livro qualquer, usando
 a frase:
 "O livro [NOME_DO_LIVRO] foi publicado pela editora [NOME_DA_EDITORA]."
 */
-// ?
+console.log('O livro world_of_warcraft_sombras_da_horda foi publicado pela editora '+book('world_of_warcraft_sombras_da_horda').editora+".");
