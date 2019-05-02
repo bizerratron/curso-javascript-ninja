@@ -19,7 +19,7 @@ var sad;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
-    O valor da variável agora é VALOR.
+   O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
 var valorAtual = function(valor, sad){
