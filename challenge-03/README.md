@@ -6,7 +6,7 @@ var pessoa = {};
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.
-As propriedades e tipos de valores para cada propriedade desse objeto devem ser:
+As propriedades e, tipos de valores, para cada propriedade desse objeto devem ser:
 - `nome` - String
 - `sobrenome` - String
 - `sexo` - String
